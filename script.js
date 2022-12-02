@@ -756,7 +756,9 @@ titleCreator("EXERCISE 21", "---");
 function halfTree(number) {
   let stars = "";
   for (i = 0; i < number; i++) {
+    // loop for new line
     for (j = 0; j <= i; j++) {
+      // loop for stars -> 1. loop 1 star, 2. loop 2 stars...
       stars += "*";
     }
     stars += "\n";
@@ -782,16 +784,39 @@ tree(3)
 
 */
 
+titleCreator("EXERCISE 22", "---");
+
+function tree(number) {
+  let string = "";
+  for (i = 0; i < number; i++) {
+    // loop for new line
+    for (j = 0; j < number - i - 1; j++) {
+      // loop for space ->
+      string += " ";
+    }
+    for (let k = 0; k < 2 * i - 1; k++) {
+      // loop for stars -> 1 stars, 3 stars, 5 stars...
+      string += "*";
+    }
+    string += "\n";
+  }
+  console.log(string);
+}
+
+tree(7);
+
 /* EXERCISE 23
 
 Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 
 */
 
+titleCreator("EXERCISE 23", "---");
+
+function isItPrime(number) {}
+
 /* WHEN YOU ARE FINISHED
 
 Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today’s Eduflow.
 
 */
-
-/* This movies array is used throughout the exercises. You’re not supposed to alter it. */
