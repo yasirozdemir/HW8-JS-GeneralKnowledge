@@ -132,7 +132,7 @@ Write a function called dice; it should randomize an integer number between 1 an
 titleCreator("EXERCISE 1", "---");
 
 function dice() {
-  return (random = parseInt(Math.random() * 6));
+  return (random = parseInt(Math.random() * 6 + 1));
 }
 
 console.log("The number created by the dice function is:", dice());
@@ -207,7 +207,7 @@ Ex.: onlyLetters("I have 4 dogs") => returns "I have dogs"
 titleCreator("EXERCISE 5", "---");
 
 function onlyLetters(string) {
-  let stringWithoutDigits = string.replace(/[0-9]/g, "");
+  let stringWithoutDigits = string.replace(/[0-9]/g, ""); // NOTE to myself: if NaN can be used as well. :)
   console.log(stringWithoutDigits);
 }
 
@@ -253,7 +253,7 @@ function whatDayIsIt() {
     "Friday",
     "Saturday",
   ];
-  let today = new Date();
+  let today = new Date(); // date info is provided by the computer itself
   let currentDayOfTheWeek = days[today.getDay()];
   console.log(currentDayOfTheWeek);
 }
@@ -291,6 +291,11 @@ function rollTheDices(number) {
   }
   console.log("The dice rolls:", diceRolls);
   console.log("\nThe sum of dice rolls:", sumOfAllValues);
+
+  return (object = {
+    diceRolls,
+    sumOfAllValues,
+  });
 }
 
 rollTheDices(4);
